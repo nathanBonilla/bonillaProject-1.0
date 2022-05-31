@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bonillaProject/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <title>Bonilla Project</title>
+</head>
+<body>
+    <div class="bg-image">
+
+    <!-- Navigation Section -->
+        <header>
+            <nav>
+                <h1 class="logo" id="logo"><a href="#">Bonilla Project</a></h1>
+                <div class="mobile_nav" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li class="nav_contact"><a href="#contact-me">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+    <!-- Hero -->
+        <div class="hero">
+            <h1 class="hero_heading">Software <span>DEVELOPER</span></h1>
+            <p class="hero_description">Nathan Bonilla</p>
+            <button class="hero_button"> <a href="{% static 'bonillaProject/bonillaResume.pdf' %}" target="_blank">My Resume</a></button>
+            <div class="social_icons">
+                <a href="https://www.linkedin.com/in/nathan-bonilla/" class="social_icon-link" target="_blank"><i class ="fab fa-linkedin"></i></a>
+                <a href="https://github.com/nathanBonilla" class="social_icon-link" target="_blank"><i class ="fab fa-github"></i></a>
+            </div>
+        </div>
+
+    <!-- Projects -->
+        <div class="projects" id="projects">
+            <h1>Projects</h1>
+            <div class="projects_cardholder">
+                <div class="projects_card">
+                    <h2>Dashboard App</h2>
+                    <p>Django and React(or vue)</p>
+                    <div class="projects_button"><button>View GitHub</button></div>
+                    <div class="projects_button"><button>View Live Code</button></div>
+                </div>
+                <div class="projects_card">
+                    <h2>Code Challenges API</h2>
+                    <p>RESTful API w/ Flask
+                        Pending approval from Author
+                    </p>
+                    <div class="projects_button"><button>View GitHub</button></div>
+                    <div class="projects_button"><button>View Live Code</button></div>
+                </div>
+                <div class="projects_card">
+                    <h2>TBD</h2>
+                    <p>Description</p>
+                    <div class="projects_button"><button>View GitHub</button></div>
+                    <div class="projects_button"><button>View Live Code</button></div>
+                </div>
+                <div class="projects_card">
+                    <h2>TBD</h2>
+                    <p>Description</p>
+                    <div class="projects_button"><button>View GitHub</button></div>
+                    <div class="projects_button"><button>View Live Code</button></div>
+                </div>
+            </div>
+                <button class="projects_more"><a href="https://github.com/nathanBonilla/bonillaproject.com/tree/main/bonillaPortfolio" target="_blank">See More</a></button>
+        </div>
+
+        <div class="about" id="about-me">
+            <h1>What's the Big Deal?</h1>
+            <div class="slideshow">
+                <button class="slide_button slide_button-left is-hidden">
+                    <i class="fa-solid fa-circle-left"></i>
+                </button>
+                <div class="slide_container">
+                    <ul class="slide_track">
+                        <li class="slide current-slide">
+                            <img class="slide_image" src="{% static 'bonillaProject/images/AWS-Microsoft-Licensing_card-image.jpg' %}" alt="">
+                            <div class="slide_info"><h2>From the Ground Up</h2><p>BonillaProject.com is a fully fledged AWS environment. EC2 Ubuntu Linux, load balancers, server management scripts and more; Building it myself from the ground up and configuring every component of the backend system is something I am tremendously proud of.</p></div>
+                        </li>
+                        <li class="slide">
+                            <img class="slide_image" src="{% static 'bonillaProject/images/pexels-prakash-chavda-7504739.jpg' %}" alt="">
+                            <div class="slide_info"><h2>Vanilla Everything</h2><p>Frameworks are great-- essential even, but I needed to prove to myself that I have a clear understanding of the basic core concepts and can implement them in a practical manner. That's the reason why this website is built from scratch.  Feel free to checkout my projects that utilize those amazing tools! </p></div>
+                        </li>
+                        <li class="slide">
+                            <img class="slide_image" src="{% static 'bonillaProject/images/jingda-chen-4F4B8ohLMX0-unsplash.jpg' %}" alt="">
+                            <div class="slide_info"><h2>This Is Just the Beginning</h2><p>If you reached this slide, then you're officially part of my journey.  I'm honored to have you here.  We'll run into trouble, and there'll be tough times, but most of all, we're gonna have fun. Get ready, and get comfortable.  <span>We still got work to do.</span></p></div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="slide_button slide_button-right">
+                    <i class="fa-solid fa-circle-right"></i>
+                </button>
+                <div class="slide_nav">
+                    <button class="slide_indicator current-slide">
+                    </button><button class="slide_indicator"></button><button class="slide_indicator"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Me -->
+        <div class="content" id="contact-me">
+            <div class="content_container">
+                <div class="content_main">
+                    <h1>Wanna get in touch?</h1>
+                    <h2>Contact Me</h2>
+                    <p class="content_description">
+                        <form action="contactform.js" method="post">
+                            <input type="text" name="name" placeholder="Name:"><br>
+                            <input type="text" name="email" placeholder="E-Mail:"><br>
+                            <input type="text" name="phone-number" placeholder="Phone Number:"><br>
+                            <textarea name="message" placeholder="Message:"></textarea><br>
+                            <button type="submit" name="submit">Submit</button>
+                        </form>
+                    </p>
+                </div>
+                <div class="content_visual">
+                    <img src="{% static 'bonillaProject/images/ales-nesetril-Im7lZjxeLhg-unsplash.jpg' %}" alt="placeholder img" class="sr">
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer_container">
+            <section class="social_media">
+                <div class="social_media-wrap">
+                    <p class="website_rights">&copy Bonilla Project 2022. All rights reserved</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="{% static 'bonillaProject/app.js' %}"></script>
+</body>
+</html>
+
+<!-- <div class="social__icons">
+    <a href="/" class="social__icon--link" target="_blank"><i class ="fab fa-linkedin"></i></a>
+    <a href="/" class="social__icon--link" target="_blank"><i class ="fab fa-github"></i></a>
+</div> -->
